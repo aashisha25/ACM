@@ -3,17 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@android:color/holo_blue_dark"
+    android:background="#f2f2f2"
     android:scrollbars="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.cardview.widget.CardView
             android:id="@+id/tm1"
             app:cardCornerRadius="5dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="150dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -22,13 +23,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:src="@drawable/swapnilsir"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -38,8 +39,8 @@
                         android:textStyle="bold"
                         android:textSize="30sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Swapnil Narayan"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -51,7 +52,7 @@
             app:cardCornerRadius="5dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="150dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -60,13 +61,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/abhisheksir"/>
+                    android:layout_weight="2"
+                    android:src="@drawable/abhishek_raj_permani"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -76,8 +77,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Abhishek Raj"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -98,13 +99,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/sahilsiyagsir"/>
+                    android:layout_weight="2"
+                    android:src="@drawable/sahil_siyag"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -114,8 +115,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Sahil Siyag"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -127,7 +128,7 @@
             app:cardCornerRadius="5dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="150dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -136,12 +137,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="2"
+                    android:src="@drawable/sameer_jain"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -151,8 +153,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Sameer Jain"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -164,7 +166,7 @@
             app:cardCornerRadius="5dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="150dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -173,12 +175,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="2"
+                    android:src="@drawable/satyavart"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -188,8 +191,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Satyavart"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -201,7 +204,7 @@
             app:cardCornerRadius="5dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="150dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -210,13 +213,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/princesir"/>
+                    android:layout_weight="2"
+                    android:src="@drawable/prince_kumar"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -226,8 +229,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Prince Kumar"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -239,7 +242,7 @@
             app:cardCornerRadius="5dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="150dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -248,12 +251,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="2"
+                    android:src="@drawable/dhyeymistry"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -263,8 +267,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Dhyey Mistry"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -276,7 +280,7 @@
             app:cardCornerRadius="5dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="150dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -285,13 +289,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/ishansir"/>
+                    android:layout_weight="2"
+                    android:src="@drawable/ishanthapa"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -301,8 +305,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Ishan Thapa"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -323,13 +327,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/akashkul"/>
+                    android:layout_weight="2"
+                    android:src="@drawable/akash"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -339,8 +343,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Akash Kulshreshtha"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -361,13 +365,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/adityashri"/>
+                    android:layout_weight="2"
+                    android:src="@drawable/adityashrivastava"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -377,8 +381,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Aditya Shivastava"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -399,13 +403,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/madhavagar"/>
+                    android:layout_weight="2"
+                    android:src="@drawable/madhav_agarwal"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -415,8 +419,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Madhav Agarwal"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -437,12 +441,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="2"
+                    android:src="@drawable/avinash"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -452,8 +457,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Avinash"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -474,13 +479,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/rashmikiranmam"/>
+                    android:layout_weight="2"
+                    android:src="@drawable/rashmikiran_pandit"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -490,8 +495,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="RashmiKiran Pandit"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -503,7 +508,7 @@
             app:cardCornerRadius="5dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="150dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -512,13 +517,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/shubhagyatamam"/>
+                    android:layout_weight="2"
+                    android:src="@drawable/shubhagyta"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -526,10 +531,10 @@
                         android:layout_height="wrap_content"
                         android:text="Content Writing and Promotion Team Head"
                         android:textStyle="bold"
-                        android:textSize="26sp"/>
+                        android:textSize="24sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Shubhagyata Swaraj Jaiswal"
                         android:textSize="20sp"/>
                 </LinearLayout>
@@ -541,7 +546,7 @@
             app:cardCornerRadius="5dp"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="150dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -550,13 +555,13 @@
                     android:layout_margin="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:src="@drawable/saurabhsir"/>
                 <LinearLayout
                     android:padding="5dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:orientation="vertical">
                     <TextView
                         android:fontFamily="sans-serif-condensed"
@@ -566,8 +571,8 @@
                         android:textStyle="bold"
                         android:textSize="26sp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Saurabh Raj"
                         android:textSize="20sp"/>
                 </LinearLayout>

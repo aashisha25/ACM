@@ -3,10 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="90dp"
     app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
     android:layout_margin="8dp"
     android:orientation="vertical"
+    android:background="@drawable/myrec"
     >
 
     <LinearLayout

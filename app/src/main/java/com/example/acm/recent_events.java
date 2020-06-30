@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -34,7 +36,9 @@ import java.util.List;
 public class recent_events extends Fragment {
 
     RecyclerView recyclerView;
+    static ProgressBar bar;
     DatabaseReference myRef;
+    Query query;
     List<Events> mList;
     //ListView listView;
     //FirebaseListAdapter<Events> listAdapter;
@@ -44,9 +48,10 @@ public class recent_events extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_recent_events, container, false);
         myRef = FirebaseDatabase.getInstance().getReference().child("EVENTS");
-        myRef.keepSynced(true);
-
-
+        query = myRef.orderByChild("year").limitToLast(10);
+        query.keepSynced(true);
+        bar = v.findViewById(R.id.progressBar);
+        bar.setVisibility(View.VISIBLE);
 
         /*listView = (ListView) v.findViewById(R.id.recyclerView);
 
@@ -71,7 +76,11 @@ public class recent_events extends Fragment {
         myRef.keepSynced(true);*/
 
         recyclerView =(RecyclerView) v.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        layoutManager.setReverseLayout(true);
+        layoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(layoutManager);
+
         return v;
     }
 
@@ -79,7 +88,7 @@ public class recent_events extends Fragment {
     public void onStart() {
         super.onStart();
         FirebaseRecyclerAdapter<Events, EventsViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Events, EventsViewHolder>
-                (Events.class,R.layout.event_model,EventsViewHolder.class,myRef) {
+                (Events.class,R.layout.event_model,EventsViewHolder.class,query) {
             @Override
             protected void populateViewHolder(EventsViewHolder eventsViewHolder, final Events events, int i) {
 
@@ -96,8 +105,6 @@ public class recent_events extends Fragment {
                         intent.putExtra("DESCRIPTION",events.getDescription());
 
                         startActivity(intent);
-
-
                     }
                 });
             }
@@ -126,6 +133,7 @@ public class recent_events extends Fragment {
         }
         public void setImage(final String imageUrl)
         {
+            bar.setVisibility(View.GONE);
             StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("IMAGES/").child(imageUrl);
             ImageView imageViewRecent = (ImageView)mView.findViewById(R.id.recent_image);
             GlideApp.with(mView.getContext())

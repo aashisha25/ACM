@@ -10,14 +10,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class ExpandableListDataPump {
 
-    public static HashMap<String, List<String>> getData() {
-        HashMap<String, List<String>> expandableListDetail = new HashMap<String, List<String>>();
-        final List<String> one, two, three, four, five, six, seven, eight;
-        one = new ArrayList<>();
+    public static LinkedHashMap<String, List<String>> getData() {
+        LinkedHashMap<String, List<String>> expandableListDetail = new LinkedHashMap<String, List<String>>();
+        final List<String> two, three, four, five, six, seven, eight;
+
         two = new ArrayList<>();
         three = new ArrayList<>();
         four = new ArrayList<>();
@@ -49,10 +50,8 @@ public class ExpandableListDataPump {
                         four.add(Title);
                     else if(Year.equals("2015"))
                         three.add(Title);
-                    else if(Year.equals("2014"))
-                        two.add(Title);
                     else
-                        one.add(Title);
+                        two.add(Title);
                 }
             }
 
@@ -69,7 +68,6 @@ public class ExpandableListDataPump {
         expandableListDetail.put("2016-2017", four);
         expandableListDetail.put("2015-2016", three);
         expandableListDetail.put("2014-2015", two);
-        expandableListDetail.put("2013-2014", one);
         return expandableListDetail;
 
     }

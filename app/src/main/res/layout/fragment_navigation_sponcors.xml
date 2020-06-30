@@ -3,24 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@android:color/holo_blue_dark">
+    android:background="#f2f2f2"
+    >
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginVertical="10dp">
+
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
             android:id="@+id/cd1">
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:src="@drawable/samsung"/>
+                android:src="@drawable/samsung"
+                android:padding="8dp"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -30,10 +42,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:src="@drawable/github"/>
+                android:src="@drawable/github"
+                android:padding="8dp"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -43,10 +57,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:src="@drawable/mozila"/>
+                android:src="@drawable/mozila"
+                android:padding="8dp"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -56,10 +72,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:padding="8dp"
                 android:src="@drawable/codingblocks"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -69,10 +87,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:padding="8dp"
                 android:src="@drawable/vedanta"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -82,10 +102,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:padding="8dp"
                 android:src="@drawable/codingninja"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -95,10 +117,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:padding="8dp"
                 android:src="@drawable/teqip"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -108,10 +132,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:padding="8dp"
                 android:src="@drawable/geeksforgeeks"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -122,10 +148,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/hackerearth"
-                android:padding="5dp"/>
+                android:padding="8dp"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -136,10 +163,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/devfolio"
-                android:padding="5dp"/>
+                android:padding="8dp"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -149,10 +177,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:padding="8dp"
                 android:src="@drawable/techgig"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -163,10 +193,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/foxmula"
-                android:padding="5dp"/>
+                android:padding="8dp"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -176,10 +207,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:padding="8dp"
                 android:src="@drawable/codechef"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="5dp"
+            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -190,7 +223,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/skillenza"
-                android:padding="5dp"/>
+                android:padding="8dp"/>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 

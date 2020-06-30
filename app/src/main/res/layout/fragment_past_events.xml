@@ -7,10 +7,16 @@
     >
     <ExpandableListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/expandableListView"
         android:layout_marginTop="56dp">
 
     </ExpandableListView>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_below="@id/expandableListView"
+        android:src="@drawable/girlcoder"/>
 </RelativeLayout>
