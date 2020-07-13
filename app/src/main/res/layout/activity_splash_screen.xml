@@ -2,14 +2,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    >
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="#fece2f">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <ImageView
         android:id="@+id/logo_id"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:src="@drawable/acm"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/des"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#FFFFFF"
+            app:cardCornerRadius="10dp">
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="ACM Student Chapter - IIT(ISM) Dhanbad"
+                android:textColor="#1A237E"
+                android:textSize="22sp" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+
