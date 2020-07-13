@@ -13,7 +13,11 @@
         android:roundIcon="@drawable/acm"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity2"></activity>
+       
         <activity android:name=".MainActivity"></activity>
+
         <activity android:name=".DisplayEvents" />
         <activity android:name=".DisplayPastEvents" />
         <activity
