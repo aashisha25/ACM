@@ -1,8 +1,8 @@
 package com.example.acm;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
+import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,9 +12,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 public class SplashScreen extends AppCompatActivity {
 
     Handler handler;
+
     Animation topAnim, bottomAnim;
     ImageView logo;
     CardView des;
