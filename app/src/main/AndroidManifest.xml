@@ -17,6 +17,7 @@
         <activity android:name=".ForgotPassword" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity2" />
         <activity android:name=".DisplayEvents" />
         <activity android:name=".DisplayPastEvents" />
         <activity

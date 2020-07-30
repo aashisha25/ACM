@@ -15,10 +15,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.hanks.htextview.HTextView;
+import com.hanks.htextview.HTextViewType;
+
 import java.util.List;
 
 public class navigation_contact_us extends Fragment implements View.OnClickListener{
 
+    HTextView hTextView;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,6 +33,10 @@ public class navigation_contact_us extends Fragment implements View.OnClickListe
         view.findViewById(R.id.facebook).setOnClickListener(this);
         view.findViewById(R.id.youtube).setOnClickListener(this);
         view.findViewById(R.id.linkedin).setOnClickListener(this);
+
+        hTextView = (HTextView) view.findViewById(R.id.reach);
+        hTextView.setAnimateType(HTextViewType.TYPER);
+        hTextView.animateText("Reach us at");
 
         return view;
 

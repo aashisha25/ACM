@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.hanks.htextview.HTextView;
+import com.hanks.htextview.HTextViewType;
+import com.hanks.htextview.scale.ScaleText;
+import com.hanks.htextview.scale.ScaleTextView;
 
 public class DisplayEvents extends AppCompatActivity {
 
@@ -28,7 +32,6 @@ public class DisplayEvents extends AppCompatActivity {
         title=findViewById(R.id.textViewTitle);
         description=findViewById(R.id.textViewDescription);
         image=findViewById(R.id.imageViewDisplay);
-
 
         title.setText(Title);
         description.setText(Description);
