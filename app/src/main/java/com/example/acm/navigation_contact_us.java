@@ -36,7 +36,7 @@ public class navigation_contact_us extends Fragment implements View.OnClickListe
 
         hTextView = (HTextView) view.findViewById(R.id.reach);
         hTextView.setAnimateType(HTextViewType.TYPER);
-        hTextView.animateText("Reach us at");
+        hTextView.animateText("Reach us at...");
 
         return view;
 

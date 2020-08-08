@@ -53,28 +53,6 @@ public class recent_events extends Fragment {
         bar = v.findViewById(R.id.progressBar);
         bar.setVisibility(View.VISIBLE);
 
-        /*listView = (ListView) v.findViewById(R.id.recyclerView);
-
-        myRef = FirebaseDatabase.getInstance().getReference().child("EVENTS");
-
-        listAdapter = new FirebaseListAdapter <Events>(getActivity(), Events.class, R.layout.event_model, myRef) {
-            TextView textViewTitle;
-            TextView textViewDate;
-
-            protected void populateView(View v, Events model, int position)
-            {
-                textViewTitle = (TextView) v.findViewById(R.id.recent_title);
-                textViewDate = (TextView) v.findViewById(R.id.recent_date);
-
-                textViewTitle.setText(model.getTitle());
-                textViewDate.setText(model.getDate());
-
-            }
-        };
-        listView.setAdapter(listAdapter);
-        listAdapter.notifyDataSetChanged();
-        myRef.keepSynced(true);*/
-
         recyclerView =(RecyclerView) v.findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setReverseLayout(true);
