@@ -1,20 +1,37 @@
 package com.example.acm;
 
 public class Achievements {
-    private String achieveDes;
+    private String title,imageURL,description;
 
     public Achievements(){}
 
-    public Achievements(String AchieveDes)
-    {
-        achieveDes = AchieveDes;
+    public Achievements(String title, String imageURL, String description){
+        this.title = title;
+        this.imageURL = imageURL;
+        this.description = description;
     }
 
-    public String getAchieveDes() {
-        return achieveDes;
+    public String getTitle() {
+        return title;
     }
 
-    public void setAchieveDes(String achieveDes) {
-        this.achieveDes = achieveDes;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

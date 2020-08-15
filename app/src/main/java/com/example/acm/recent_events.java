@@ -39,9 +39,6 @@ public class recent_events extends Fragment {
     static ProgressBar bar;
     DatabaseReference myRef;
     Query query;
-    List<Events> mList;
-    //ListView listView;
-    //FirebaseListAdapter<Events> listAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

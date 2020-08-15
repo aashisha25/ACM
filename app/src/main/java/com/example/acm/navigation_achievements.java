@@ -13,13 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class navigation_achievements extends Fragment {
 
@@ -45,7 +47,6 @@ public class navigation_achievements extends Fragment {
         layoutManager.setReverseLayout(true);
         layoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(layoutManager);
-
     }
 
     @Override
@@ -56,7 +57,9 @@ public class navigation_achievements extends Fragment {
             @Override
             protected void populateViewHolder(navigation_achievements.EventsViewHolder eventsViewHolder, final Achievements achievements, int i) {
 
-                eventsViewHolder.setAchieveDes(achievements.getAchieveDes());
+                eventsViewHolder.setAchieveDes(achievements.getDescription());
+                eventsViewHolder.setAchieveTitle(achievements.getTitle());
+                eventsViewHolder.setAchieveURL(achievements.getImageURL());
             }
         };
         recyclerView.setAdapter(firebaseRecyclerAdapter);
@@ -70,10 +73,23 @@ public class navigation_achievements extends Fragment {
             mView = itemView;
         }
 
-        public void setAchieveDes(String title) {
-            TextView textViewTitle = (TextView) mView.findViewById(R.id.achieve_msg);
+        public void setAchieveDes(String description) {
+            TextView textViewDesc = (TextView) mView.findViewById(R.id.achieve_desc);
+            textViewDesc.setText(description);
+        }
+
+        public void setAchieveTitle(String title) {
+            TextView textViewTitle = (TextView) mView.findViewById(R.id.achieve_title);
             textViewTitle.setText(title);
+        }
+
+        public void setAchieveURL(final String imageUrl) {
             pbar.setVisibility(View.GONE);
+            StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("ACHIEVEMENTS/").child(imageUrl);
+            ImageView imageViewAchieve = (ImageView)mView.findViewById(R.id.achieve_image);
+            GlideApp.with(mView.getContext())
+                    .load(storageReference)
+                    .into(imageViewAchieve);
         }
     }
 }

@@ -31,8 +31,8 @@ public class navigation_team extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_navigation_team, container, false);
-        email = view.findViewById(R.id.logoEmail);
-        linkedIn = view.findViewById(R.id.logoLinkedIn);
+        //email = view.findViewById(R.id.logoEmail);
+        //linkedIn = view.findViewById(R.id.logoLinkedIn);
         ArrayList<ExampleforTeam> exampleList = new ArrayList<>();
         exampleList.add(new ExampleforTeam(R.drawable.swapnil, "Swapnil Narayan", "ChairMan ACM IIT(ISM) Dhanbad"));
         exampleList.add(new ExampleforTeam(R.drawable.abhishekraj, "Abhishek Raj", "Vice Chair ACM IIT(ISM) Dhanbad"));
@@ -55,7 +55,7 @@ public class navigation_team extends Fragment {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         mRecyclerView.setAdapter(adapter);
 
-        final ArrayList<Pair<String, String>> l = new ArrayList<Pair <String, String>>();
+        /*final ArrayList<Pair<String, String>> l = new ArrayList<Pair <String, String>>();
         l.add(new Pair<String, String> ("swapism7@gmail.com", "https://www.linkedin.com/in/swapzism/"));
         l.add(new Pair<String, String> ("abhishekraj29011998@gmail.com", "https://www.linkedin.com/in/abhishek-raj-permani-495483156/"));
         l.add(new Pair<String, String>("sahilsiyag88@gmail.com", "https://www.linkedin.com/in/sahil-siyag-4aa893191/"));
@@ -92,7 +92,7 @@ public class navigation_team extends Fragment {
                 String linkedInUrl = url.second;
                 startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + linkedInUrl)));
             }
-        });
+        });*/
 
         return view;
     }
