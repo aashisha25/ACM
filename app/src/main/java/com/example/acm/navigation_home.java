@@ -75,12 +75,6 @@ public class navigation_home extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.fab_team).setOnClickListener(this);
         view.findViewById(R.id.homeSeeAll).setOnClickListener(this);
 
-        /*aboutAcmHeader = view.findViewById(R.id.aboutACMHeader);
-        titleRecentAchieve = view.findViewById(R.id.homeAchieve);
-        titleRecentEvents = view.findViewById(R.id.homeEvents);
-        aboutAcmHeader.setPaintFlags(aboutAcmHeader.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        titleRecentAchieve.setPaintFlags(titleRecentAchieve.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        titleRecentEvents.setPaintFlags(titleRecentEvents.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);*/
     }
 
     @Override
