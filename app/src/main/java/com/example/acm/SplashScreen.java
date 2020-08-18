@@ -29,7 +29,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         boolean temp = isFirstTime();
         if(temp == false){
-            Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+            Intent intent = new Intent(SplashScreen.this, LoginActivity.class);
             startActivity(intent);
             finish();
         }else {

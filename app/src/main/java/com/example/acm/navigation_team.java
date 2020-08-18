@@ -31,9 +31,11 @@ public class navigation_team extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_navigation_team, container, false);
-        //email = view.findViewById(R.id.logoEmail);
-        //linkedIn = view.findViewById(R.id.logoLinkedIn);
+        email = view.findViewById(R.id.team_mail);
+        linkedIn = view.findViewById(R.id.team_linkedin);
         ArrayList<ExampleforTeam> exampleList = new ArrayList<>();
+        exampleList.add(new ExampleforTeam(R.drawable.facultysponsor, "Rajendra Pamula", "Faculty Sponsor"));
+        exampleList.add(new ExampleforTeam(R.drawable.facultycosponsot, "Madhulika Mohanty", "Faculty Co-Sponsor"));
         exampleList.add(new ExampleforTeam(R.drawable.swapnil, "Swapnil Narayan", "ChairMan ACM IIT(ISM) Dhanbad"));
         exampleList.add(new ExampleforTeam(R.drawable.abhishekraj, "Abhishek Raj", "Vice Chair ACM IIT(ISM) Dhanbad"));
         exampleList.add(new ExampleforTeam(R.drawable.shailsiyag, "Sahil Siyag", "Secretary And Management Head"));
@@ -42,8 +44,6 @@ public class navigation_team extends Fragment {
         exampleList.add(new ExampleforTeam(R.drawable.prince, "Prince Kumar", "PR Team Head"));
         exampleList.add(new ExampleforTeam(R.drawable.dhyeysir, "Dhyey Mistry", "Tech Head"));
         exampleList.add(new ExampleforTeam(R.drawable.ishanthapa, "Ishan Thapa", "Promotion Team Head"));
-        exampleList.add(new ExampleforTeam(R.drawable.akashkulsh, "Akash Kulshreshtha", "Designing Team Head"));
-        exampleList.add(new ExampleforTeam(R.drawable.adityashivas, "Aditya Shrivastav", "Sponsor Team Head"));
         exampleList.add(new ExampleforTeam(R.drawable.madhavaggar, "Madhav Aggarwal", "Content Writing Team Head"));
         exampleList.add(new ExampleforTeam(R.drawable.avinashsir, "Avinash", "Campus Ambassador Program Head"));
         exampleList.add(new ExampleforTeam(R.drawable.rashmikiranpandit, "Rashmikiran Pandit", "Sponsor Team Head"));
@@ -64,8 +64,6 @@ public class navigation_team extends Fragment {
         l.add(new Pair<String, String>("princegup678@gmail.com", "https://www.linkedin.com/in/princegup678/"));
         l.add(new Pair<String, String>("dhyeybm@gmail.com", "https://www.linkedin.com/in/dhyey-mistry-859177177/"));
         l.add(new Pair<String, String>("ishanthapa2607@gmail.com", "https://www.linkedin.com/in/ishan-thapa-426722194/"));
-        l.add(new Pair<String, String>("", "https://www.linkedin.com/in/akash-kulshrestha-262458134/"));
-        l.add(new Pair<String, String>("", "https://www.linkedin.com/in/aditya-shrivastav-b6003517a/"));
         l.add(new Pair<String, String>("Madhav.21.2k@gmail.com", "https://www.linkedin.com/in/madhav-agarwal-021a55180/"));
         l.add(new Pair<String, String>("avinash21997@gmail.com", "https://www.linkedin.com/in/avinash-b904a8194/"));
         l.add(new Pair<String, String>("panditrk2000@gmail.com", "https://www.linkedin.com/in/rashmikiran-pandit-358196189/"));
