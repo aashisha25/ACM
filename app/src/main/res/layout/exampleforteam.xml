@@ -54,15 +54,6 @@
         android:layout_marginRight="5dp">
 
     <ImageView
-        android:id="@+id/team_fb"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:padding="2dp"
-        android:layout_margin="5dp"
-        android:src="@drawable/facebookteam"
-        />
-
-    <ImageView
         android:id="@+id/team_linkedin"
         android:layout_width="24dp"
         android:layout_height="24dp"

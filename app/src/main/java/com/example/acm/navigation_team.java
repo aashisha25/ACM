@@ -49,49 +49,30 @@ public class navigation_team extends Fragment {
         exampleList.add(new ExampleforTeam(R.drawable.rashmikiranpandit, "Rashmikiran Pandit", "Sponsor Team Head"));
         exampleList.add(new ExampleforTeam(R.drawable.subhagyata, "Subhagyata Swaraj Jaiswal", "Content Writing and Promotion Team Head"));
         exampleList.add(new ExampleforTeam(R.drawable.saurabh, "Saurabh Raj", "Designing Team Head"));
-        ExampleTeamAdapter adapter = new ExampleTeamAdapter(exampleList);
+
+        final ArrayList<Pair<String, String>> l = new ArrayList<>();
+        l.add(new Pair<>("",""));
+        l.add(new Pair<>("",""));
+        l.add(new Pair<>("swapism7@gmail.com", "https://www.linkedin.com/in/swapzism/"));
+        l.add(new Pair<>("abhishekraj29011998@gmail.com", "https://www.linkedin.com/in/abhishek-raj-permani-495483156/"));
+        l.add(new Pair<>("sahilsiyag88@gmail.com", "https://www.linkedin.com/in/sahil-siyag-4aa893191/"));
+        l.add(new Pair<>("sameer2000jain12@gmail.com", "https://www.linkedin.com/in/sameer-jain-882589158/"));
+        l.add(new Pair<>("", "https://www.linkedin.com/in/satyavart-b8630b173/"));
+        l.add(new Pair<>("princegup678@gmail.com", "https://www.linkedin.com/in/princegup678/"));
+        l.add(new Pair<>("dhyeybm@gmail.com", "https://www.linkedin.com/in/dhyey-mistry-859177177/"));
+        l.add(new Pair<>("ishanthapa2607@gmail.com", "https://www.linkedin.com/in/ishan-thapa-426722194/"));
+        l.add(new Pair<>("Madhav.21.2k@gmail.com", "https://www.linkedin.com/in/madhav-agarwal-021a55180/"));
+        l.add(new Pair<>("avinash21997@gmail.com", "https://www.linkedin.com/in/avinash-b904a8194/"));
+        l.add(new Pair<>("panditrk2000@gmail.com", "https://www.linkedin.com/in/rashmikiran-pandit-358196189/"));
+        l.add(new Pair<>("Shubhagytaswaraj@gmail.com", "https://www.linkedin.com/in/shubhagyta-395ab4185/"));
+        l.add(new Pair<>("saurabhraj.18je0747@pe.iitism.ac.in", "https://www.linkedin.com/in/saurabh-raj-aab418184/"));
+        ExampleTeamAdapter adapter = new ExampleTeamAdapter(exampleList,l,getContext());
         mRecyclerView = view.findViewById(R.id.recyclerViewTeam);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         mRecyclerView.setAdapter(adapter);
 
-        /*final ArrayList<Pair<String, String>> l = new ArrayList<Pair <String, String>>();
-        l.add(new Pair<String, String> ("swapism7@gmail.com", "https://www.linkedin.com/in/swapzism/"));
-        l.add(new Pair<String, String> ("abhishekraj29011998@gmail.com", "https://www.linkedin.com/in/abhishek-raj-permani-495483156/"));
-        l.add(new Pair<String, String>("sahilsiyag88@gmail.com", "https://www.linkedin.com/in/sahil-siyag-4aa893191/"));
-        l.add(new Pair<String, String>("sameer2000jain12@gmail.com", "https://www.linkedin.com/in/sameer-jain-882589158/"));
-        l.add(new Pair<String, String>("", "https://www.linkedin.com/in/satyavart-b8630b173/"));
-        l.add(new Pair<String, String>("princegup678@gmail.com", "https://www.linkedin.com/in/princegup678/"));
-        l.add(new Pair<String, String>("dhyeybm@gmail.com", "https://www.linkedin.com/in/dhyey-mistry-859177177/"));
-        l.add(new Pair<String, String>("ishanthapa2607@gmail.com", "https://www.linkedin.com/in/ishan-thapa-426722194/"));
-        l.add(new Pair<String, String>("Madhav.21.2k@gmail.com", "https://www.linkedin.com/in/madhav-agarwal-021a55180/"));
-        l.add(new Pair<String, String>("avinash21997@gmail.com", "https://www.linkedin.com/in/avinash-b904a8194/"));
-        l.add(new Pair<String, String>("panditrk2000@gmail.com", "https://www.linkedin.com/in/rashmikiran-pandit-358196189/"));
-        l.add(new Pair<String, String>("Shubhagytaswaraj@gmail.com", "https://www.linkedin.com/in/shubhagyta-395ab4185/"));
-        l.add(new Pair<String, String>("saurabhraj.18je0747@pe.iitism.ac.in", "https://www.linkedin.com/in/saurabh-raj-aab418184/"));
-
-        email.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int itemPosition =  mRecyclerView.getChildLayoutPosition(v);
-                Pair<String, String> url = l.get(itemPosition);
-                String emailUrl = url.first;
-                if(emailUrl.length() != 0) {
-                    startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + emailUrl)));
-                }
-            }
-        });
-
-        this.linkedIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int itemPosition =  mRecyclerView.getChildLayoutPosition(v);
-                Pair<String, String> url = l.get(itemPosition);
-                String linkedInUrl = url.second;
-                startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + linkedInUrl)));
-            }
-        });*/
-
         return view;
     }
+
 }

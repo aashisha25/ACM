@@ -1,5 +1,6 @@
 package com.example.acm;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -33,6 +34,7 @@ public class navigation_contact_us extends Fragment implements View.OnClickListe
         view.findViewById(R.id.facebook).setOnClickListener(this);
         view.findViewById(R.id.youtube).setOnClickListener(this);
         view.findViewById(R.id.linkedin).setOnClickListener(this);
+        view.findViewById(R.id.instagram).setOnClickListener(this);
 
         hTextView = (HTextView) view.findViewById(R.id.reach);
         hTextView.setAnimateType(HTextViewType.TYPER);
@@ -90,6 +92,19 @@ public class navigation_contact_us extends Fragment implements View.OnClickListe
                     intent1.setData(Uri.parse(urlBrowser));
                 }
                 this.startActivity(intent1);
+                break;
+            case R.id.instagram :
+                Uri uri = Uri.parse("http://instagram.com/_u/acm_iitism/");
+                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+                likeIng.setPackage("com.instagram.android");
+
+                try {
+                    startActivity(likeIng);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("http://instagram.com/acm_iitism/")));
+                }
+
 
         }
     }

@@ -47,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, SplashScreen.class));
         }*/
     }
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar, menu);
@@ -85,7 +82,8 @@ public class MainActivity extends AppCompatActivity {
                         R.id.navigation_sponcors,
                         R.id.navigation_team,
                         R.id.navigation_contact_us,
-                        R.id.navigation_achievements
+                        R.id.navigation_achievements,
+                        R.id.navigation_benefits
                         ).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
     }

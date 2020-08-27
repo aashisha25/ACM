@@ -71,4 +71,3 @@ public class SplashScreen extends AppCompatActivity {
         return firstTime;
     }
 }
-

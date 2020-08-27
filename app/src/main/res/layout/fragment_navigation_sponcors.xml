@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     >
 
     <RelativeLayout
@@ -22,7 +21,7 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd1">
+            android:id="@+id/samsung">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -37,8 +36,38 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd2"
-            android:layout_below="@id/cd1">
+            android:id="@+id/walmart"
+            android:layout_below="@id/samsung">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/walmart"
+                android:padding="8dp"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="5dp"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_margin="10dp"
+            android:id="@+id/mozilla"
+            android:layout_below="@id/walmart">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/mozilla"
+                android:padding="8dp"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="5dp"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_margin="10dp"
+            android:id="@+id/github"
+            android:layout_below="@id/mozilla">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -52,12 +81,12 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd3"
-            android:layout_below="@id/cd2">
+            android:id="@+id/hackerrank"
+            android:layout_below="@id/github">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:src="@drawable/mozila"
+                android:src="@drawable/hackerrank"
                 android:padding="8dp"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -67,8 +96,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd4"
-            android:layout_below="@id/cd3">
+            android:id="@+id/codingblocks"
+            android:layout_below="@id/hackerrank">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -82,8 +111,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd5"
-            android:layout_below="@id/cd4">
+            android:id="@+id/vedanta"
+            android:layout_below="@id/codingblocks">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -97,8 +126,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd6"
-            android:layout_below="@id/cd5">
+            android:id="@+id/codingninja"
+            android:layout_below="@id/vedanta">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -112,8 +141,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd7"
-            android:layout_below="@id/cd6">
+            android:id="@+id/teqip"
+            android:layout_below="@id/codingninja">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -127,8 +156,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd8"
-            android:layout_below="@id/cd7">
+            android:id="@+id/gfg"
+            android:layout_below="@id/teqip">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -142,8 +171,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd9"
-            android:layout_below="@id/cd8">
+            android:id="@+id/hackerearth"
+            android:layout_below="@id/gfg">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -157,8 +186,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd10"
-            android:layout_below="@id/cd9">
+            android:id="@+id/dev"
+            android:layout_below="@id/hackerearth">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -172,8 +201,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd11"
-            android:layout_below="@id/cd10">
+            android:id="@+id/techgig"
+            android:layout_below="@id/dev">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -187,8 +216,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd12"
-            android:layout_below="@id/cd11">
+            android:id="@+id/foxmula"
+            android:layout_below="@id/techgig">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -202,8 +231,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd13"
-            android:layout_below="@id/cd12">
+            android:id="@+id/chef"
+            android:layout_below="@id/foxmula">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -217,8 +246,8 @@
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:layout_margin="10dp"
-            android:id="@+id/cd14"
-            android:layout_below="@id/cd13">
+            android:id="@+id/skill"
+            android:layout_below="@id/chef">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"

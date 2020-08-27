@@ -2,6 +2,7 @@ package com.example.acm;
 
 import android.content.Intent;
 import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -31,12 +33,11 @@ import com.synnapps.carouselview.ImageListener;
 
 public class navigation_home extends Fragment implements View.OnClickListener {
 
-    RecyclerView recyclerViewEvents,recyclerViewAchieve;
-    DatabaseReference myRef,myref1;
-    Query query,query1;
+    RecyclerView recyclerViewEvents;
+    DatabaseReference myRef;
+    Query query;
     static ProgressBar bar_home;
-    //CarouselView carouselView;
-    TextView aboutAcmHeader, titleRecentAchieve, titleRecentEvents;
+    String number,email;
     NavController navController;
     @Nullable
     @Override
@@ -47,15 +48,8 @@ public class navigation_home extends Fragment implements View.OnClickListener {
         myRef = FirebaseDatabase.getInstance().getReference().child("EVENTS");
         query = myRef.orderByChild("year").limitToLast(10);
         query.keepSynced(true);
-        /*myref1 = FirebaseDatabase.getInstance().getReference().child("ACHIEVEMENTS");
-        query1 = myref1.limitToLast(5);
-        query1.keepSynced(true);*/
         bar_home = view.findViewById(R.id.progressHome);
         bar_home.setVisibility(View.VISIBLE);
-
-        /*recyclerViewAchieve=(RecyclerView) view.findViewById(R.id.homeRecyclerAchieve);
-        LinearLayoutManager layoutManager1 = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,true);
-        recyclerViewAchieve.setLayoutManager(layoutManager1);*/
 
         recyclerViewEvents =(RecyclerView) view.findViewById(R.id.homeRecycler);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,true);
@@ -74,6 +68,10 @@ public class navigation_home extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.fab_events).setOnClickListener(this);
         view.findViewById(R.id.fab_team).setOnClickListener(this);
         view.findViewById(R.id.homeSeeAll).setOnClickListener(this);
+        view.findViewById(R.id.contact_call1).setOnClickListener(this);
+        view.findViewById(R.id.contact_call2).setOnClickListener(this);
+        view.findViewById(R.id.contact_send_mail1).setOnClickListener(this);
+        view.findViewById(R.id.contact_send_mail2).setOnClickListener(this);
 
     }
 
@@ -85,8 +83,6 @@ public class navigation_home extends Fragment implements View.OnClickListener {
             @Override
             protected void populateViewHolder(navigation_home.EventsViewHolder eventsViewHolder, final Events events, int i) {
 
-                //eventsViewHolder.setTitle(events.getTitle());
-                //eventsViewHolder.setDate(events.getDate());
                 eventsViewHolder.setImage(events.getImageURL());
                 eventsViewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -102,20 +98,7 @@ public class navigation_home extends Fragment implements View.OnClickListener {
                 });
             }
         };
-
         recyclerViewEvents.setAdapter(firebaseRecyclerAdapter);
-
-        /*FirebaseRecyclerAdapter<Achievements, navigation_home.EventsViewHolderAchieve> firebaseRecyclerAdapter1 = new FirebaseRecyclerAdapter<Achievements, EventsViewHolderAchieve>
-                (Achievements.class, R.layout.home_event_model, navigation_home.EventsViewHolderAchieve.class, query1) {
-            @Override
-            protected void populateViewHolder(navigation_home.EventsViewHolderAchieve eventsViewHolder, final Achievements achievements, int i) {
-
-                //eventsViewHolder.setAchieveDes(achievements.getDescription());
-                //eventsViewHolder.setAchieveTitle(achievements.getTitle());
-                eventsViewHolder.setAchieveURL(achievements.getImageURL());
-            }
-        };
-        recyclerViewAchieve.setAdapter(firebaseRecyclerAdapter1);*/
     }
 
     public static class EventsViewHolder extends RecyclerView.ViewHolder
@@ -125,16 +108,6 @@ public class navigation_home extends Fragment implements View.OnClickListener {
         {
             super(itemView);
             mView=itemView;
-        }
-        public void setTitle(String title)
-        {
-            TextView textViewTitle = (TextView)mView.findViewById(R.id.recent_title);
-            textViewTitle.setText(title);
-        }
-        public void setDate(String date)
-        {
-            TextView textViewDate = (TextView)mView.findViewById(R.id.recent_date);
-            textViewDate.setText(date);
         }
         public void setImage(final String imageUrl)
         {
@@ -147,39 +120,12 @@ public class navigation_home extends Fragment implements View.OnClickListener {
         }
     }
 
-    /*public static class EventsViewHolderAchieve extends RecyclerView.ViewHolder {
-        View mView;
-
-        public EventsViewHolderAchieve(View itemView) {
-            super(itemView);
-            mView = itemView;
-        }
-
-        public void setAchieveDes(String description) {
-            TextView textViewDesc = (TextView) mView.findViewById(R.id.achieve_desc);
-            textViewDesc.setText(description);
-        }
-
-        public void setAchieveTitle(String title) {
-            TextView textViewTitle = (TextView) mView.findViewById(R.id.achieve_title);
-            textViewTitle.setText(title);
-        }
-
-        public void setAchieveURL(final String imageUrl) {
-            StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("ACHIEVEMENTS/").child(imageUrl);
-            ImageView imageViewAchieve = (ImageView)mView.findViewById(R.id.homeModelImage);
-            GlideApp.with(mView.getContext())
-                    .load(storageReference)
-                    .into(imageViewAchieve);
-        }
-    }*/
-
     @Override
     public void onClick(View view) {
         switch (view.getId())
         {
             case R.id.fab_achievements :
-                navController.navigate(R.id.action_navigation_home_to_navigation_achievements);
+                navController.navigate(R.id.action_navigation_home_to_navigation_benefits);
                 break;
             case R.id.fab_events :
                 navController.navigate(R.id.action_navigation_home_to_navigation_event);
@@ -190,6 +136,46 @@ public class navigation_home extends Fragment implements View.OnClickListener {
             case R.id.homeSeeAll :
                 navController.navigate(R.id.action_navigation_home_to_navigation_event);
                 break;
+            case R.id.contact_call1 :
+                number = "7864024344";
+                makeCall(number);
+                break;
+            case R.id.contact_call2 :
+                number = "9079868390";
+                makeCall(number);
+                break;
+            case R.id.contact_send_mail1 :
+                email = "swapism7@gmail.com";
+                sendMail(email);
+                break;
+            case R.id.contact_send_mail2 :
+                email = "abhishekraj29011998@gmail.com";
+                sendMail(email);
+        }
+    }
+
+    public void makeCall(String num) {
+        if(!num.trim().equals("0")){
+            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + num.trim()));
+            startActivity(intent);}
+        else{
+            Toast.makeText(getContext(),"Sorry number not available",Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void sendMail(String s) {
+        if(!s.trim().isEmpty()) {
+            Intent send = new Intent(Intent.ACTION_SENDTO);
+            String uriText = "mailto:" + Uri.encode(s.trim()) +
+                    "?subject=" + Uri.encode("Subject") +
+                    "&body=" + Uri.encode("Your Message");
+            Uri uri = Uri.parse(uriText);
+
+            send.setData(uri);
+            startActivity(Intent.createChooser(send, "Send mail..."));
+        }
+        else{
+            Toast.makeText(getContext(),"Sorry email not available",Toast.LENGTH_LONG).show();
         }
     }
 }
