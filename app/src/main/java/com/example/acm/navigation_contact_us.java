@@ -33,6 +33,7 @@ public class navigation_contact_us extends Fragment implements View.OnClickListe
         view.findViewById(R.id.facebook).setOnClickListener(this);
         view.findViewById(R.id.youtube).setOnClickListener(this);
         view.findViewById(R.id.linkedin).setOnClickListener(this);
+        view.findViewById(R.id.instagram).setOnClickListener(this);
 
         hTextView = (HTextView) view.findViewById(R.id.reach);
         hTextView.setAnimateType(HTextViewType.TYPER);
@@ -90,7 +91,12 @@ public class navigation_contact_us extends Fragment implements View.OnClickListe
                     intent1.setData(Uri.parse(urlBrowser));
                 }
                 this.startActivity(intent1);
-
+                break;
+            case R.id.instagram :
+                String url = "https://www.instagram.com/acm_iitism/?igshid=1h4g8ng88jmbl";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
         }
     }
 }

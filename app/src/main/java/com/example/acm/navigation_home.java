@@ -2,6 +2,7 @@ package com.example.acm;
 
 import android.content.Intent;
 import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +27,10 @@ public class navigation_home extends Fragment implements View.OnClickListener {
 
 
     CarouselView carouselView;
-    TextView aboutAcmHeader, titleRecentAchieve, titleRecentEvents;
+    TextView aboutAcmHeader, titleRecentAchieve, titleRecentEvents, textImpContact;
     int[] sampleImages = {R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4};
     NavController navController;
+    ImageView swapMail, swapCall, abiCall, abiMail;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,9 +45,11 @@ public class navigation_home extends Fragment implements View.OnClickListener {
         aboutAcmHeader = view.findViewById(R.id.aboutACMHeader);
         titleRecentAchieve = view.findViewById(R.id.title3);
         titleRecentEvents = view.findViewById(R.id.title1);
+        textImpContact = view.findViewById(R.id.textImpContact);
         aboutAcmHeader.setPaintFlags(aboutAcmHeader.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         titleRecentAchieve.setPaintFlags(titleRecentAchieve.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         titleRecentEvents.setPaintFlags(titleRecentEvents.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        textImpContact.setPaintFlags(titleRecentEvents.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         navController= Navigation.findNavController(view);
         view.findViewById(R.id.fab_achievements).setOnClickListener(this);
         view.findViewById(R.id.fab_events).setOnClickListener(this);
@@ -54,6 +59,55 @@ public class navigation_home extends Fragment implements View.OnClickListener {
         carouselView.setPageCount(sampleImages.length);
 
         carouselView.setImageListener(imageListener);
+        swapCall = view.findViewById(R.id.callSwap);
+        swapMail = view.findViewById(R.id.mailSwap);
+        abiCall = view.findViewById(R.id.callAbhi);
+        abiMail = view.findViewById(R.id.mailAbhi);
+
+        abiMail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = "abhishekraj29011998@gmail.com";
+                Intent send = new Intent(Intent.ACTION_SENDTO);
+                String uriText = "mailto:" + Uri.encode(s) +
+                        "?subject=" + Uri.encode("Subject") +
+                        "&body=" + Uri.encode("the body of the message");
+                Uri uri = Uri.parse(uriText);
+
+                send.setData(uri);
+                startActivity(Intent.createChooser(send, "Send mail..."));
+            }
+        });
+        swapMail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = "swapism7@gmail.com";
+                Intent send = new Intent(Intent.ACTION_SENDTO);
+                String uriText = "mailto:" + Uri.encode(s) +
+                        "?subject=" + Uri.encode("Subject") +
+                        "&body=" + Uri.encode("the body of the message");
+                Uri uri = Uri.parse(uriText);
+
+                send.setData(uri);
+                startActivity(Intent.createChooser(send, "Send mail..."));
+            }
+        });
+        swapCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String num = "7864024344";
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + num));
+                startActivity(intent);
+            }
+        });
+        abiCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String num = "9079868390";
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + num));
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
