@@ -14,13 +14,11 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         >
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
-
-        <com.hanks.htextview.HTextView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -28,7 +26,7 @@
             android:layout_centerHorizontal="true"
             android:textSize="30sp"
             android:textStyle="bold"
-            app:animateType="typer"/>
+            android:text="Reach Us At..."/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="220dp"
@@ -58,7 +56,7 @@
                     android:layout_marginStart="8dp"
                     android:fontFamily="sans-serif-medium"
                     android:textStyle="italic"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:text="\@acm.iitismdhn"/>
 
             </LinearLayout>
@@ -93,7 +91,7 @@
                         android:padding="2dp"
                         android:fontFamily="sans-serif-medium"
                         android:textStyle="italic"
-                        android:textSize="14dp"
+                        android:textSize="14sp"
                         android:text="ACM Student Chapter IIT Dhanbad" />
 
                 </LinearLayout>
@@ -126,7 +124,7 @@
                         android:layout_marginStart="8dp"
                         android:fontFamily="sans-serif-medium"
                         android:textStyle="italic"
-                        android:textSize="14dp"
+                        android:textSize="14sp"
                         android:text="\@acm-student-chapter-iit-ism-dhanbad/"/>
 
                 </LinearLayout>
@@ -151,7 +149,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:padding="4dp"
-                        android:src="@drawable/instagram"/>
+                        android:src="@drawable/insta"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -160,16 +158,11 @@
                         android:layout_marginStart="8dp"
                         android:fontFamily="sans-serif-medium"
                         android:textStyle="italic"
-                        android:textSize="14dp"
+                        android:textSize="14sp"
                         android:text="acm_iitism"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
         </RelativeLayout>
-
-
     </androidx.cardview.widget.CardView>
-
-
 </RelativeLayout>

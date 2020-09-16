@@ -59,7 +59,7 @@
         android:layout_height="24dp"
         android:padding="2dp"
         android:layout_margin="5dp"
-        android:src="@drawable/linkedinteam"
+        android:src="@drawable/linkedinteam1"
         />
 
         <ImageView

@@ -4,10 +4,11 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.example.acm"
-        minSdkVersion 16
+        applicationId "com.acmiitism.acm"
+        minSdkVersion 22
         targetSdkVersion 29
-        versionCode 1
+        multiDexEnabled true
+        versionCode 3
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -19,6 +20,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '29.0.2'
 }
 
 dependencies {
@@ -33,8 +35,7 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'com.google.firebase:firebase-auth:18.0.0'
     implementation 'com.google.android.gms:play-services-auth:18.0.0'
-    implementation 'com.synnapps:carouselview:0.1.5'
-
+    
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -50,16 +51,12 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     //implementation 'com.android.support:design:28.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
-    implementation 'com.synnapps:carouselview:0.1.5'
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
-    def htextview_version = "0.1.6"
-// as 3.0 use implementation
-    implementation 'hanks.xyz:htextview-library:0.1.3'
-    implementation "com.hanks:htextview-base:$htextview_version"
-    implementation "com.hanks:htextview-line:$htextview_version"
-    implementation "com.hanks:htextview-typer:$htextview_version"
-    implementation "com.hanks:htextview-scale:$htextview_version"
 
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+    implementation 'com.android.support:multidex:1.0.3'
 
     def nav_version = "2.3.0-alpha06"
     implementation "androidx.navigation:navigation-fragment:$nav_version"
